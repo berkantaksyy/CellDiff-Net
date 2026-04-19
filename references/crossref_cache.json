@@ -1,4 +1,794 @@
 {
+  "3D Bioprinting of Cultivated Meat Followed by the Development of a Fine-Tuned YOLO Model for the Detection and Counting of Lipoblasts, Fibroblasts, and Myogenic Cells": {
+    "DOI": "10.31083/fbl36266",
+    "ISSN": [
+      "2768-6701",
+      "2768-6698"
+    ],
+    "URL": "https://doi.org/10.31083/fbl36266",
+    "abstract": "<jats:p>Background: Cultured meat holds significant potential as a pivotal solution for producing safe, sustainable, and high-quality protein to meet the growing demands of the global population. However, scaling this technology requires innovative bioengineering approaches integrated with software methods to assess the growth of cell cultures. This study aims to develop a technology for 3D printing a hybrid meat product and subsequently design a finely tuned You Only Look Once (YOLO) model for detecting and counting lipoblasts, fibroblasts, and myogenic cells. Methods: Cultures of multipotent mesenchymal stem cells (MMSCs) and fibroblasts were obtained from the domestic rabbit Oryctolagus cuniculus domesticus. Standard protocols were employed to induce adipogenic and myogenic differentiation from MMSCs. Fibroblasts were isolated from skin biopsy samples. The 3D printing process utilized bioinks. The engineering approach involved the development of a unique print head integrated into a 3D printer. Confocal and transmission electron microscopy of the cells within the construct was performed. A dataset of digital images of lipoblasts, myogenic cells, and fibroblasts was created. Four models based on the YOLOv8-seg architecture were trained on annotated images, implemented in the Telegram bot. Results: Stable cultures of lipoblasts, myogenic cells, and fibroblasts were obtained. 3D-printed tissue constructs composed of rabbit cells, sodium alginate, and sunflower protein were successfully fabricated. A unique print head for a 3D printer was assembled. Confocal microscopy confirmed cell viability within the tissue construct. Ultrastructural analysis revealed dense intercellular contacts and high metabolic activity. The resulting product replicated the organoleptic and structural properties of natural meat. In the IT segment, the single-class model trained on lipoblasts achieved metrics of recall 85%, precision 77%, and mean Average Precision at IoU threshold 0.50 (mAP50) 79%, which improved in the multiclass model to recall 92%, precision 92%, and mAP50 81%. The IT solution was implemented in a Telegram bot capable of detecting and counting different cell types. Conclusions: A 3D tissue construct was achieved. Detailed microscopic analysis demonstrated cell viability and high metabolic activity within the polymerized alginate hydrogel. The engineered tissue product presents a potential alternative to natural meat. Additionally, the trained neural network models, implemented in a Telegram bot, proved effective in monitoring culture growth and identifying cell types in digital images across three cell cultures. As a result, we developed four YOLOv8 models and demonstrated that the multiclass model outperforms the single-class model. However, all models exhibited reduced accuracy in high-density cultures, where overlapping cells led to undercounting.</jats:p>",
+    "alternative-id": [
+      "S2768-6701(25)01658-2"
+    ],
+    "article-number": "36266",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0009-0685-5281",
+        "affiliation": [
+          {
+            "name": "Research Laboratory \u201cMedical Digital Images Based on the Basic Model\u201d, Department of Bioengineering, Faculty of Bioengineering and Veterinary Medicine, Don State Technical University, 344000 Rostov-on-Don, Russia"
+          }
+        ],
+        "authenticated-orcid": true,
+        "family": "Nabiullina",
+        "given": "Rozaliia",
+        "sequence": "first"
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1929-6345",
+        "affiliation": [
+          {
+            "name": "Research Laboratory \u201cMedical Digital Images Based on the Basic Model\u201d, Department of Bioengineering, Faculty of Bioengineering and Veterinary Medicine, Don State Technical University, 344000 Rostov-on-Don, Russia"
+          }
+        ],
+        "authenticated-orcid": true,
+        "family": "Golovin",
+        "given": "Sergey",
+        "sequence": "first"
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4703-1616",
+        "affiliation": [
+          {
+            "name": "Research Laboratory \u201cMedical Digital Images Based on the Basic Model\u201d, Department of Bioengineering, Faculty of Bioengineering and Veterinary Medicine, Don State Technical University, 344000 Rostov-on-Don, Russia"
+          }
+        ],
+        "authenticated-orcid": true,
+        "family": "Kirichenko",
+        "given": "Evgeniya",
+        "sequence": "first"
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5243-026X",
+        "affiliation": [
+          {
+            "name": "Wizntech LLC, 344002 Rostov-on-Don, Russia"
+          }
+        ],
+        "authenticated-orcid": true,
+        "family": "Petrushan",
+        "given": "Mikhail",
+        "sequence": "first"
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8873-3625",
+        "affiliation": [
+          {
+            "name": "Academy of Biology and Biotechnology, Southern Federal University, 344090 Rostov-on-Don, Russia"
+          }
+        ],
+        "authenticated-orcid": true,
+        "family": "Logvinov",
+        "given": "Alexander",
+        "sequence": "first"
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0002-7420-085X",
+        "affiliation": [
+          {
+            "name": "Research Laboratory \u201cMedical Digital Images Based on the Basic Model\u201d, Department of Bioengineering, Faculty of Bioengineering and Veterinary Medicine, Don State Technical University, 344000 Rostov-on-Don, Russia"
+          }
+        ],
+        "authenticated-orcid": true,
+        "family": "Kaplya",
+        "given": "Marya",
+        "sequence": "first"
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1194-7251",
+        "affiliation": [
+          {
+            "name": "Research Laboratory \u201cMedical Digital Images Based on the Basic Model\u201d, Department of Bioengineering, Faculty of Bioengineering and Veterinary Medicine, Don State Technical University, 344000 Rostov-on-Don, Russia"
+          }
+        ],
+        "authenticated-orcid": true,
+        "family": "Sedova",
+        "given": "Darya",
+        "sequence": "first"
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4036-5410",
+        "affiliation": [
+          {
+            "name": "Research Laboratory \u201cMedical Digital Images Based on the Basic Model\u201d, Department of Bioengineering, Faculty of Bioengineering and Veterinary Medicine, Don State Technical University, 344000 Rostov-on-Don, Russia"
+          }
+        ],
+        "authenticated-orcid": true,
+        "family": "Rodkin",
+        "given": "Stanislav",
+        "sequence": "first"
+      }
+    ],
+    "container-title": [
+      "Frontiers in Bioscience-Landmark"
+    ],
+    "content-domain": {
+      "crossmark-restriction": false,
+      "domain": []
+    },
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          28
+        ]
+      ],
+      "date-time": "2025-03-28T12:04:10Z",
+      "timestamp": 1743163450000
+    },
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          28
+        ]
+      ],
+      "date-time": "2025-03-28T12:12:31Z",
+      "timestamp": 1743163951000
+    },
+    "funder": [
+      {
+        "DOI": "10.13039/501100012190",
+        "award": [
+          "FZNE-2024-0004"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "FZNE-2024-0004"
+            ]
+          }
+        ],
+        "doi-asserted-by": "crossref",
+        "id": [
+          {
+            "asserted-by": "crossref",
+            "id": "10.13039/501100012190",
+            "id-type": "DOI"
+          }
+        ],
+        "name": "Ministry of Science and Higher Education of the Russian Federation"
+      }
+    ],
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          11
+        ]
+      ],
+      "date-time": "2025-12-11T07:43:52Z",
+      "timestamp": 1765439032456,
+      "version": "3.41.2"
+    },
+    "is-referenced-by-count": 4,
+    "issn-type": [
+      {
+        "type": "print",
+        "value": "2768-6701"
+      },
+      {
+        "type": "electronic",
+        "value": "2768-6698"
+      }
+    ],
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          18
+        ]
+      ]
+    },
+    "journal-issue": {
+      "issue": "3",
+      "published-print": {
+        "date-parts": [
+          [
+            2025
+          ]
+        ]
+      }
+    },
+    "language": "en",
+    "license": [
+      {
+        "URL": "https://creativecommons.org/licenses/by/4.0/",
+        "content-version": "unspecified",
+        "delay-in-days": 0,
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              18
+            ]
+          ],
+          "date-time": "2025-03-18T00:00:00Z",
+          "timestamp": 1742256000000
+        }
+      }
+    ],
+    "link": [
+      {
+        "URL": "https://www.imrpress.com/journal/FBL/30/3/10.31083/FBL36266",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "member": "16242",
+    "prefix": "10.31083",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          18
+        ]
+      ]
+    },
+    "published-online": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          18
+        ]
+      ]
+    },
+    "publisher": "IMR Press",
+    "reference": [
+      {
+        "DOI": "10.1016/j.onehlt.2024.100864.",
+        "doi-asserted-by": "publisher",
+        "key": "ref1",
+        "unstructured": "Roth JA, Galyon J. Food security: The ultimate one-health challenge. One Health (Amsterdam, Netherlands). 2024; 19: 100864."
+      },
+      {
+        "DOI": "10.1007/s11837-022-05316-x.",
+        "doi-asserted-by": "publisher",
+        "key": "ref2",
+        "unstructured": "Mateti T, Laha A, Shenoy P. Artificial Meat Industry: Production Methodology, Challenges, and Future. JOM. 2022; 74: 3428\u20133444."
+      },
+      {
+        "DOI": "10.1016/j.tifs.2021.07.010.",
+        "doi-asserted-by": "publisher",
+        "key": "ref3",
+        "unstructured": "Zhang L, Hu Y, Badar IH, Xia X, Kong B, Chen Q. Prospects of artificial meat: Opportunities and challenges around consumer acceptance. Trends in Food Science & Technology. 2021; 116: 434\u2013444."
+      },
+      {
+        "DOI": "10.1016/j.tifs.2020.01.026.",
+        "doi-asserted-by": "publisher",
+        "key": "ref4",
+        "unstructured": "Zhang G, Zhao X, Li X, Du G, Zhou J, Chen J. Challenges and possibilities for bio-manufacturing cultured meat. Trends in Food Science & Technology. 2020; 97: 443\u2013450."
+      },
+      {
+        "DOI": "10.1093/jas/skaa172.",
+        "doi-asserted-by": "publisher",
+        "key": "ref5",
+        "unstructured": "Bryant CJ. Culture, meat, and cultured meat. Journal of Animal Science. 2020; 98: skaa172."
+      },
+      {
+        "DOI": "10.1016/j.meatsci.2012.04.008.",
+        "doi-asserted-by": "publisher",
+        "key": "ref6",
+        "unstructured": "Post MJ. Cultured meat from stem cells: challenges and prospects. Meat Science. 2012; 92: 297\u2013301."
+      },
+      {
+        "DOI": "10.1007/s10640-021-00551-3.",
+        "doi-asserted-by": "publisher",
+        "key": "ref7",
+        "unstructured": "Treich N. Cultured Meat: Promises and Challenges. Environmental & Resource Economics. 2021; 79: 33\u201361."
+      },
+      {
+        "DOI": "10.1016/j.foodres.2022.111818.",
+        "doi-asserted-by": "publisher",
+        "key": "ref8",
+        "unstructured": "Zheng YY, Shi YF, Zhu HZ, Ding SJ, Zhou GH. Quality evaluation of cultured meat with plant protein scaffold. Food Research International (Ottawa, Ont.). 2022; 161: 111818."
+      },
+      {
+        "DOI": "10.1080/10408398.2020.1815172.",
+        "doi-asserted-by": "publisher",
+        "key": "ref9",
+        "unstructured": "K Handral H, Hua Tay S, Wan Chan W, Choudhury D. 3D Printing of cultured meat products. Critical Reviews in Food Science and Nutrition. 2022; 62: 272\u2013281."
+      },
+      {
+        "DOI": "10.1016/j.meatsci.2019.03.005.",
+        "doi-asserted-by": "publisher",
+        "key": "ref10",
+        "unstructured": "Dick A, Bhandari B, Prakash S. 3D printing of meat. Meat Science. 2019; 153: 35\u201344."
+      },
+      {
+        "DOI": "10.1016/j.tifs.2021.09.020.",
+        "doi-asserted-by": "publisher",
+        "key": "ref11",
+        "unstructured": "Bhat ZF, Morton JD, Kumar S, Bhat HF, Aadil RM, Bekhit AE-DA. 3D printing: Development of animal products and special foods. Trends in Food Science & Technology. 2021; 118: 87\u2013105."
+      },
+      {
+        "DOI": "10.3390/foods10092011.",
+        "doi-asserted-by": "publisher",
+        "key": "ref12",
+        "unstructured": "Chen Y, Zhang M, Bhandari B. 3D Printing of Steak-like Foods Based on Textured Soybean Protein. Foods (Basel, Switzerland). 2021; 10: 2011."
+      },
+      {
+        "DOI": "10.1080/10495398.2021.1911810.",
+        "doi-asserted-by": "publisher",
+        "key": "ref13",
+        "unstructured": "Srutee R, Sowmya RS, Annapure US. Clean meat: techniques for meat production and its upcoming challenges. Animal Biotechnology. 2022; 33: 1721\u20131729."
+      },
+      {
+        "DOI": "10.1016/j.jclepro.2018.06.259.",
+        "doi-asserted-by": "publisher",
+        "key": "ref14",
+        "unstructured": "Thakur S, Sharma B, Verma A, Chaudhary J, Tamulevicius S, Thakur VK. Recent progress in sodium alginate based sustainable hydrogels for environmental applications. Journal of Cleaner Production. 2018; 198: 143\u2013159."
+      },
+      {
+        "DOI": "10.1016/s1389-1723(00)87103-0.",
+        "doi-asserted-by": "publisher",
+        "key": "ref15",
+        "unstructured": "Blandino A, Mac\u00edas M, Cantero D. Formation of calcium alginate gel capsules: influence of sodium alginate and CaCl2 concentration on gelation kinetics. Journal of Bioscience and Bioengineering. 1999; 88: 686\u2013689."
+      },
+      {
+        "DOI": "10.1016/j.carbpol.2006.05.025.",
+        "doi-asserted-by": "publisher",
+        "key": "ref16",
+        "unstructured": "Gomez CG, Rinaudo M, Villar MA. Oxidation of sodium alginate and characterization of the oxidized derivatives. Carbohydrate Polymers. 2007; 67: 296\u2013304."
+      },
+      {
+        "DOI": "10.1007/978-3-031-55968-6_20.",
+        "doi-asserted-by": "publisher",
+        "key": "ref17",
+        "unstructured": "Casnici CVC, Schulzmann D. Future Feast: Mapping the Cultivated Meat Sector. Cultiv. Meat. (pp. 407\u2013423). Springer Nature Switzerland: Cham. 2024."
+      },
+      {
+        "DOI": "10.1016/B978-0-443-18767-4.00012-3.",
+        "doi-asserted-by": "publisher",
+        "key": "ref18",
+        "unstructured": "DeSantis G, Fuci\u00f1os P, Pastrana LM, Oliveira SM. Bioprinting as a fabrication method for cultivated meat. In Fraser EDG, Kaplan DL, Newman L, Yada RY (eds.) Cellular Agriculture (pp. 189\u2013202). 1st ed. Academic Press: London, UK. 2024."
+      },
+      {
+        "DOI": "10.3390/foods10020320.",
+        "doi-asserted-by": "publisher",
+        "key": "ref19",
+        "unstructured": "Pereira T, Barroso S, Gil MM. Food Texture Design by 3D Printing: A Review. Foods (Basel, Switzerland). 2021; 10: 320."
+      },
+      {
+        "DOI": "10.1016/j.foodres.2023.113464.",
+        "doi-asserted-by": "publisher",
+        "key": "ref20",
+        "unstructured": "Pawar D, Lo Presti D, Silvestri S, Schena E, Massaroni C. Current and future technologies for monitoring cultured meat: A review. Food Research International (Ottawa, Ont.). 2023; 173: 113464."
+      },
+      {
+        "DOI": "10.3390/biology10030204.",
+        "doi-asserted-by": "publisher",
+        "key": "ref21",
+        "unstructured": "Djisalov M, Kne\u017ei\u0107 T, Podunavac I, \u017divojevi\u0107 K, Radonic V, Kne\u017eevi\u0107 N\u017d, et al. Cultivating Multidisciplinarity: Manufacturing and Sensing Challenges in Cultured Meat Production. Biology. 2021; 10: 204."
+      },
+      {
+        "DOI": "10.1016/j.biomaterials.2021.121274.",
+        "doi-asserted-by": "publisher",
+        "key": "ref22",
+        "unstructured": "Chen L, Guttieres D, Koenigsberg A, Barone PW, Sinskey AJ, Springs SL. Large-scale cultured meat production: Trends, challenges and promising biomanufacturing technologies. Biomaterials. 2022; 280: 121274."
+      },
+      {
+        "DOI": "10.3389/frai.2024.1424012.",
+        "doi-asserted-by": "publisher",
+        "key": "ref23",
+        "unstructured": "Todhunter ME, Jubair S, Verma R, Saqe R, Shen K, Duffy B. Artificial intelligence and machine learning applications for cultured meat. Frontiers in Artificial Intelligence. 2024; 7: 1424012."
+      },
+      {
+        "DOI": "10.3389/fgene.2022.913372.",
+        "doi-asserted-by": "publisher",
+        "key": "ref24",
+        "unstructured": "Sun Q, Yang X, Guo J, Zhao Y, Liu Y. CIEGAN: A Deep Learning Tool for Cell Image Enhancement. Frontiers in Genetics. 2022; 13: 913372."
+      },
+      {
+        "DOI": "10.1002/9780470649367.",
+        "doi-asserted-by": "publisher",
+        "key": "ref25",
+        "unstructured": "Freshney RI. Culture of Animal Cells: A Manual of Basic Technique and Specialized Applications. Wiley: Hoboken, NJ, USA. 2010."
+      },
+      {
+        "DOI": "10.1007/s11626-018-0263-5.",
+        "doi-asserted-by": "publisher",
+        "key": "ref26",
+        "unstructured": "Miersch C, Stange K, R\u00f6ntgen M. Effects of trypsinization and of a combined trypsin, collagenase, and DNase digestion on liberation and in vitro function of satellite cells isolated from juvenile porcine muscles. In Vitro Cellular & Developmental Biology. Animal. 2018; 54: 406\u2013412."
+      },
+      {
+        "DOI": "10.1186/gb-2006-7-10-r100.",
+        "doi-asserted-by": "publisher",
+        "key": "ref27",
+        "unstructured": "Carpenter AE, Jones TR, Lamprecht MR, Clarke C, Kang IH, Friman O, et al. CellProfiler: image analysis software for identifying and quantifying cell phenotypes. Genome Biology. 2006; 7: R100."
+      },
+      {
+        "DOI": "10.1038/s41598-023-34943-w.",
+        "doi-asserted-by": "publisher",
+        "key": "ref28",
+        "unstructured": "Kataras TJ, Jang TJ, Koury J, Singh H, Fok D, Kaul M. ACCT is a fast and accessible automatic cell counting tool using machine learning for 2D image segmentation. Scientific Reports. 2023; 13: 8213."
+      },
+      {
+        "DOI": "10.1049/htl.2018.5098.",
+        "doi-asserted-by": "publisher",
+        "key": "ref29",
+        "unstructured": "Alam MM, Islam MT. Machine learning approach of automatic identification and counting of blood cells. Healthcare Technology Letters. 2019; 6: 103\u2013108."
+      },
+      {
+        "DOI": "10.11591/ijeecs.v25.i1.pp200-213.",
+        "doi-asserted-by": "publisher",
+        "key": "ref30",
+        "unstructured": "Abas SM, Abdulazeez AM, Zeebaree DQ. A YOLO and convolutional neural network for the detection and classification of leukocytes in leukemia. Indonesian Journal of Electrical Engineering and Computer Science. 2022; 25: 200."
+      },
+      {
+        "DOI": "10.1016/j.bspc.2021.103416.",
+        "doi-asserted-by": "publisher",
+        "key": "ref31",
+        "unstructured": "Xu F, Li X, Yang H, Wang Y, Xiang W. TE-YOLOF: Tiny and efficient YOLOF for blood cell detection. Biomed Signal Process Control. 2022; 73: 103416."
+      },
+      {
+        "DOI": "10.3390/s20133653.",
+        "doi-asserted-by": "publisher",
+        "key": "ref32",
+        "unstructured": "Antonets D, Russkikh N, Sanchez A, Kovalenko V, Bairamova E, Shtokalo D, et al. CellCountCV-A Web-Application for Accurate Cell Counting and Automated Batch Processing of Microscopic Images Using Fully Convolutional Neural Networks. Sensors (Basel, Switzerland). 2020; 20: 3653."
+      },
+      {
+        "DOI": "10.1109/CVPR.2016.91.",
+        "doi-asserted-by": "publisher",
+        "key": "ref33",
+        "unstructured": "Redmon J, Divvala S, Girshick R, Farhadi A. You Only Look Once: Unified, Real-Time Object Detection. 2016 IEEE Conference on Computer Vision and Pattern Recognition (pp. 779\u2013788). IEEE: Piscataway, NJ, USA. 2016."
+      },
+      {
+        "DOI": "10.1016/j.procs.2022.01.135.",
+        "doi-asserted-by": "publisher",
+        "key": "ref34",
+        "unstructured": "Jiang P, Ergu D, Liu F, Cai Y, Ma B. A Review of Yolo Algorithm Developments. Procedia Computer Science. 2022; 199: 1066\u20131073."
+      },
+      {
+        "DOI": "10.1109/ICEPES60647.2024.10653506.",
+        "doi-asserted-by": "publisher",
+        "key": "ref35",
+        "unstructured": "Soni A, Rai A. YOLO for Medical Object Detection (2018\u20132024). 2024 IEEE 3rd International Conference on Electrical Power and Energy Systems (pp. 1\u20137). IEEE: Piscataway, NJ, USA. 2024."
+      },
+      {
+        "DOI": "10.1101/2021.08.04.455113.",
+        "doi-asserted-by": "publisher",
+        "key": "ref36",
+        "unstructured": "Naing KM, Kittichai V, Tongloy T, Chuwongin S, Boonsang S. The Evaluation of Acute Myeloid Leukaemia (AML) Blood Cell Detection Models Using Different YOLO Approaches. 2021.  (preprint)"
+      },
+      {
+        "DOI": "10.3390/make5040083.",
+        "doi-asserted-by": "publisher",
+        "key": "ref37",
+        "unstructured": "Terven J, C\u00f3rdova-Esparza D-M, Romero-Gonz\u00e1lez J-A. A Comprehensive Review of YOLO Architectures in Computer Vision: From YOLOv1 to YOLOv8 and YOLO-NAS. Machine Learning and Knowledge Extraction. 2023; 5: 1680\u20131716."
+      },
+      {
+        "DOI": "10.1109/ACCESS.2024.3386826.",
+        "doi-asserted-by": "publisher",
+        "key": "ref38",
+        "unstructured": "Ragab MG, Abdulkadir SJ, Muneer A, Alqushaibi A, Sumiea EH, Qureshi R, et al. A Comprehensive Systematic Review of YOLO for Medical Object Detection (2018 to 2023). IEEE Access. 2024; 12: 57815\u201357836."
+      },
+      {
+        "DOI": "10.1371/journal.pone.0291625.",
+        "doi-asserted-by": "publisher",
+        "key": "ref39",
+        "unstructured": "Kuijpers L, van Veen E, van der Pol LA, Dekker NH. Automated cell counting for Trypan blue-stained cell cultures using machine learning. PloS One. 2023; 18: e0291625."
+      },
+      {
+        "DOI": "10.3390/informatics11040087.",
+        "doi-asserted-by": "publisher",
+        "key": "ref40",
+        "unstructured": "Arcila-Diaz L, Mejia-Cabrera HI, Arcila-Diaz J. Estimation of Mango Fruit Production Using Image Analysis and Machine Learning Algorithms. Informatics. 2024; 11: 87."
+      },
+      {
+        "DOI": "10.1051/e3sconf/202127313010.",
+        "doi-asserted-by": "publisher",
+        "key": "ref41",
+        "unstructured": "Chapek S, Golovin S, Chikindas M, Ponomareva S, Rudoy D, Olshevskaya A. Application of 3D bioprinting in the study of bacterial biofilms. E3S Web of Conferences. 2021; 273: 13010."
+      },
+      {
+        "DOI": "10.3390/ijms242115708.",
+        "doi-asserted-by": "publisher",
+        "key": "ref42",
+        "unstructured": "Rodkin S, Nwosu C, Raevskaya M, Khanukaev M, Bekova K, Vasilieva I, et al. The Role of Hydrogen Sulfide in the Localization and Expression of p53 and Cell Death in the Nervous Tissue in Traumatic Brain Injury and Axotomy. International Journal of Molecular Sciences. 2023; 24: 15708."
+      },
+      {
+        "DOI": "10.3390/ijms252211892.",
+        "doi-asserted-by": "publisher",
+        "key": "ref43",
+        "unstructured": "Rodkin S, Nwosu C, Kirichenko E. The Role of Hydrogen Sulfide in iNOS and APP Localization and Expression in Neurons and Glial Cells Under Traumatic Effects: An Experimental Study with Bioinformatics Analysis and Biomodeling. International Journal of Molecular Sciences. 2024; 25: 11892."
+      },
+      {
+        "DOI": "10.3103/S1060992X17010052.",
+        "doi-asserted-by": "publisher",
+        "key": "ref44",
+        "unstructured": "Kopeliovich MV, Petrushan MV, Samarin AI. Evolutionary algorithm for structural-parametric optimization of the remote photoplethysmography method. Optical Memory and Neural Networks. 2017; 26: 55\u201361."
+      },
+      {
+        "DOI": "10.1016/j.ymeth.2008.03.006.",
+        "doi-asserted-by": "publisher",
+        "key": "ref45",
+        "unstructured": "Bunnell BA, Flaat M, Gagliardi C, Patel B, Ripoll C. Adipose-derived stem cells: isolation, expansion and differentiation. Methods (San Diego, Calif.). 2008; 45: 115\u2013120."
+      },
+      {
+        "DOI": "10.1080/14653240902736266.",
+        "doi-asserted-by": "publisher",
+        "key": "ref46",
+        "unstructured": "Lund P, Pilgaard L, Duroux M, Fink T, Zachar V. Effect of growth media and serum replacements on the proliferation and differentiation of adipose-derived stem cells. Cytotherapy. 2009; 11: 189\u2013197."
+      },
+      {
+        "DOI": "10.1007/s11626-012-9488-x.",
+        "doi-asserted-by": "publisher",
+        "key": "ref47",
+        "unstructured": "Meligy FY, Shigemura K, Behnsawy HM, Fujisawa M, Kawabata M, Shirakawa T. The efficiency of in vitro isolation and myogenic differentiation of MSCs derived from adipose connective tissue, bone marrow, and skeletal muscle tissue. In Vitro Cellular & Developmental Biology. Animal. 2012; 48: 203\u2013215."
+      },
+      {
+        "DOI": "10.3390/cells10082100.",
+        "doi-asserted-by": "publisher",
+        "key": "ref48",
+        "unstructured": "Abade Dos Santos FA, Carvalho CL, Almeida I, Fagulha T, Rammos F, Barros SC, et al. Simple Method for Establishing Primary Leporidae Skin Fibroblast Cultures. Cells. 2021; 10: 2100."
+      },
+      {
+        "DOI": "10.1038/nmeth.2089.",
+        "doi-asserted-by": "publisher",
+        "key": "ref49",
+        "unstructured": "Schneider CA, Rasband WS, Eliceiri KW. NIH Image to ImageJ: 25 years of image analysis. Nature Methods. 2012; 9: 671\u2013675."
+      },
+      {
+        "DOI": "10.1117/12.2653643.",
+        "doi-asserted-by": "publisher",
+        "key": "ref50",
+        "unstructured": "Kerley CI, Cai LY, Tang Y, Beason-Held LL, Resnick SM, Cutting LE, et al. Batch size: go big or go home? Counterintuitive improvement in medical autoencoders with smaller batch size. Proceedings of SPIE\u2013the International Society for Optical Engineering. 2023; 12464: 124640H."
+      },
+      {
+        "DOI": "10.3390/ani14162367.",
+        "doi-asserted-by": "publisher",
+        "key": "ref51",
+        "unstructured": "El-Sabrout K, Sherasiya A, Ahmad S, Aggag S, Nannoni E, Cavallini D, et al. Environmental Enrichment in Rabbit Husbandry: Comparative Impacts on Performance and Welfare. Animals: an Open Access Journal from MDPI. 2024; 14: 2367."
+      },
+      {
+        "DOI": "10.1016/j.meatsci.2018.04.029.",
+        "doi-asserted-by": "publisher",
+        "key": "ref52",
+        "unstructured": "Cullere M, Dalle Zotte A. Rabbit meat production and consumption: State of knowledge and future perspectives. Meat Science. 2018; 143: 137\u2013146."
+      },
+      {
+        "DOI": "10.1201/b13585.",
+        "doi-asserted-by": "publisher",
+        "key": "ref53",
+        "unstructured": "Suckow MA, Schroeder V, Douglas FA. The Laboratory Rabbit. CRC Press: Boca Raton. 2010."
+      },
+      {
+        "DOI": "10.3389/fsufs.2024.1358862.",
+        "doi-asserted-by": "publisher",
+        "key": "ref54",
+        "unstructured": "Yang R, Fei Z, Wang L, Tang H, Sun W, Li M, et al. Highly efficient isolation and 3D printing of fibroblasts for cultured meat production. Frontiers in Sustainable Food Systems. 2024; 8."
+      },
+      {
+        "DOI": "10.1038/s43016-023-00857-z.",
+        "doi-asserted-by": "publisher",
+        "key": "ref55",
+        "unstructured": "Jara TC, Park K, Vahmani P, Van Eenennaam AL, Smith LR, Denicol AC. Stem cell-based strategies and challenges for production of cultivated meat. Nature Food. 2023; 4: 841\u2013853."
+      },
+      {
+        "DOI": "10.1590/fst.70621.",
+        "doi-asserted-by": "publisher",
+        "key": "ref56",
+        "unstructured": "GONCHAROVA NA, MERZLYAKOVA NV. Food shortages and hunger as a global problem. Journal of Food Science and Technology. 2022; 42."
+      },
+      {
+        "DOI": "10.1016/j.cdnut.2023.102049.",
+        "doi-asserted-by": "publisher",
+        "key": "ref57",
+        "unstructured": "Vissamsetti N, Simon-Collins M, Lin S, Bandyopadhyay S, Kuriyan R, Sybesma W, et al. Local Sources of Protein in Low- and Middle-Income Countries: How to Improve the Protein Quality? Current Developments in Nutrition. 2023; 8: 102049."
+      },
+      {
+        "DOI": "10.3389/fnut.2024.1315555.",
+        "doi-asserted-by": "publisher",
+        "key": "ref58",
+        "unstructured": "Hauser M, Zirman A, Rak R, Nachman I. Challenges and opportunities in cell expansion for cultivated meat. Frontiers in Nutrition. 2024; 11: 1315555."
+      },
+      {
+        "DOI": "10.7554/eLife.93220.",
+        "doi-asserted-by": "publisher",
+        "key": "ref59",
+        "unstructured": "Ma T, Ren R, Lv J, Yang R, Zheng X, Hu Y, et al. Transdifferentiation of fibroblasts into muscle cells to constitute cultured meat with tunable intramuscular fat deposition. eLife. 2024; 13: RP93220."
+      },
+      {
+        "DOI": "10.3390/jfb14040218.",
+        "doi-asserted-by": "publisher",
+        "key": "ref60",
+        "unstructured": "Lee K, Jackson A, John N, Zhang R, Ozhava D, Bhatia M, et al. Bovine Fibroblast-Derived Extracellular Matrix Promotes the Growth and Preserves the Stemness of Bovine Stromal Cells during In Vitro Expansion. Journal of Functional Biomaterials. 2023; 14: 218."
+      },
+      {
+        "DOI": "10.1016/j.mtbio.2023.100720.",
+        "doi-asserted-by": "publisher",
+        "key": "ref61",
+        "unstructured": "Louis F, Furuhashi M, Yoshinuma H, Takeuchi S, Matsusaki M. Mimicking Wagyu beef fat in cultured meat: Progress in edible bovine adipose tissue production with controllable fatty acid composition. Materials Today. Bio. 2023; 21: 100720."
+      },
+      {
+        "DOI": "10.1038/s42003-022-03852-5.",
+        "doi-asserted-by": "publisher",
+        "key": "ref62",
+        "unstructured": "Zagury Y, Ianovici I, Landau S, Lavon N, Levenberg S. Engineered marble-like bovine fat tissue for cultured meat. Communications Biology. 2022; 5: 927."
+      },
+      {
+        "DOI": "10.1016/j.biomaterials.2022.121649.",
+        "doi-asserted-by": "publisher",
+        "key": "ref63",
+        "unstructured": "Takahashi H, Yoshida A, Gao B, Yamanaka K, Shimizu T. Harvest of quality-controlled bovine myogenic cells and biomimetic bovine muscle tissue engineering for sustainable meat production. Biomaterials. 2022; 287: 121649."
+      },
+      {
+        "DOI": "10.1021/acs.jafc.3c06919.",
+        "doi-asserted-by": "publisher",
+        "key": "ref64",
+        "unstructured": "Wang J, Ding S, Da C, Chen C, Wu Z, Li C, et al. Morphology-Based Prediction of Proliferation and Differentiation Potencies of Porcine Muscle Stem Cells for Cultured Meat Production. Journal of Agricultural and Food Chemistry. 2023; 71: 18613\u201318621."
+      },
+      {
+        "DOI": "10.1002/bit.27469.",
+        "doi-asserted-by": "publisher",
+        "key": "ref65",
+        "unstructured": "Hanga MP, Ali J, Moutsatsou P, de la Raga FA, Hewitt CJ, Nienow A, et al. Bioprocess development for scalable production of cultivated meat. Biotechnology and Bioengineering. 2020; 117: 3029\u20133039."
+      },
+      {
+        "DOI": "10.1517/14712598.2012.707181.",
+        "doi-asserted-by": "publisher",
+        "key": "ref66",
+        "unstructured": "Achilli TM, Meyer J, Morgan JR. Advances in the formation, use and understanding of multi-cellular spheroids. Expert Opinion on Biological Therapy. 2012; 12: 1347\u20131360."
+      },
+      {
+        "DOI": "10.1002/adhm.202000608.",
+        "doi-asserted-by": "publisher",
+        "key": "ref67",
+        "unstructured": "Kim SJ, Kim EM, Yamamoto M, Park H, Shin H. Engineering Multi-Cellular Spheroids for Tissue Engineering and Regenerative Medicine. Advanced Healthcare Materials. 2020; 9: e2000608."
+      },
+      {
+        "DOI": "10.1002/wrna.39.",
+        "doi-asserted-by": "publisher",
+        "key": "ref68",
+        "unstructured": "Hernandez-Verdun D, Roussel P, Thiry M, Sirri V, Lafontaine DLJ. The nucleolus: structure/function relationship in RNA metabolism. Wiley Interdisciplinary Reviews. RNA. 2010; 1: 415\u2013431."
+      },
+      {
+        "DOI": "10.1007/s00412-013-0430-0.",
+        "doi-asserted-by": "publisher",
+        "key": "ref69",
+        "unstructured": "Grummt I. The nucleolus\u2014guardian of cellular homeostasis and genome integrity. Chromosoma. 2013; 122: 487\u2013497."
+      },
+      {
+        "DOI": "10.1007/978-3-319-38882-3_2.",
+        "doi-asserted-by": "publisher",
+        "key": "ref70",
+        "unstructured": "Dubois ML, Boisvert FM. The Nucleolus: Structure and Function. The Functional Nucleus (pp. 29\u201349). Springer International Publishing: Cham. 2016."
+      },
+      {
+        "DOI": "10.1016/j.febslet.2006.03.050.",
+        "doi-asserted-by": "publisher",
+        "key": "ref71",
+        "unstructured": "Csala M, B\u00e1nhegyi G, Benedetti A. Endoplasmic reticulum: a metabolic compartment. FEBS Letters. 2006; 580: 2160\u20132165."
+      },
+      {
+        "DOI": "10.1016/j.ccr.2023.215618.",
+        "doi-asserted-by": "publisher",
+        "key": "ref72",
+        "unstructured": "Wang H, Zhang X, Xiu T, Wang H, Li P, Tang B. Fluorescence probes for sensing and imaging within Golgi apparatus. Coordination Chemistry Reviews. 2024; 502: 215618."
+      },
+      {
+        "DOI": "10.1016/j.foodchem.2023.137994.",
+        "doi-asserted-by": "publisher",
+        "key": "ref73",
+        "unstructured": "Shi B, Guo X, Liu H, Jiang K, Liu L, Yan N, et al. Dissecting Maillard reaction production in fried foods: Formation mechanisms, sensory characteristic attribution, control strategy, and gut homeostasis regulation. Food Chemistry. 2024; 438: 137994."
+      },
+      {
+        "DOI": "10.1007/978-3-031-19485-6_9.",
+        "doi-asserted-by": "publisher",
+        "key": "ref74",
+        "unstructured": "Jindal D, Singh M. Counting of Cells. Animal Cell Culture: Principles and Practice (pp. 131\u2013145). Springer: Cham. 2023."
+      },
+      {
+        "DOI": "10.3390/informatics8030059.",
+        "doi-asserted-by": "publisher",
+        "key": "ref75",
+        "unstructured": "Chowdhury A, Rosenthal J, Waring J, Umeton R. Applying Self-Supervised Learning to Medicine: Review of the State of the Art and Medical Implementations. Informatics. 2021; 8: 59."
+      },
+      {
+        "DOI": "10.1038/s43588-024-00666-9.",
+        "doi-asserted-by": "publisher",
+        "key": "ref76",
+        "unstructured": "A multi-task learning strategy to pretrain models for medical image analysis. Nature Computational Science. 2024; 4: 479\u2013480."
+      },
+      {
+        "DOI": "10.1007/978-3-319-66179-7_59.",
+        "doi-asserted-by": "publisher",
+        "key": "ref77",
+        "unstructured": "Ghafoorian M, Mehrtash A, Kapur T, Karssemeijer N, Marchiori E, Pesteie M, et al. Transfer Learning for Domain Adaptation in MRI: Application in Brain Lesion Segmentation (pp. 516\u2013524). Springer: Cham. 2017."
+      },
+      {
+        "DOI": "10.1177/1533033819858363.",
+        "doi-asserted-by": "publisher",
+        "key": "ref78",
+        "unstructured": "Chen Q, Hu S, Long P, Lu F, Shi Y, Li Y. A Transfer Learning Approach for Malignant Prostate Lesion Detection on Multiparametric MRI. Technology in Cancer Research & Treatment. 2019; 18: 1533033819858363."
+      },
+      {
+        "DOI": "10.1016/j.procir.2021.10.038.",
+        "doi-asserted-by": "publisher",
+        "key": "ref79",
+        "unstructured": "Manettas C, Nikolakis N, Alexopoulos K. Synthetic datasets for Deep Learning in computer-vision assisted tasks in manufacturing. Procedia CIRP. 2021; 103: 237\u2013242."
+      },
+      {
+        "DOI": "10.1109/CVPR.2017.632.",
+        "doi-asserted-by": "publisher",
+        "key": "ref80",
+        "unstructured": "Isola P, Zhu JY, Zhou T, Efros AA. Image-to-Image Translation with Conditional Adversarial Networks. 2017 IEEE Conference on Computer Vision and Pattern Recognition (pp. 5967\u20135976). IEEE: Honolulu. 2017."
+      },
+      {
+        "DOI": "10.3389/fonc.2021.638182.",
+        "doi-asserted-by": "publisher",
+        "key": "ref81",
+        "unstructured": "Yang R, Yu Y. Artificial Convolutional Neural Network in Object Detection and Semantic Segmentation for Medical Imaging Analysis. Frontiers in Oncology. 2021; 11: 638182."
+      },
+      {
+        "DOI": "10.1007/s00330-022-09289-y.",
+        "doi-asserted-by": "publisher",
+        "key": "ref82",
+        "unstructured": "Li J, Li S, Li X, Miao S, Dong C, Gao C, et al. Primary bone tumor detection and classification in full-field bone radiographs via YOLO deep learning model. European Radiology. 2023; 33: 4237\u20134248."
+      },
+      {
+        "DOI": "10.1038/s41598-023-43452-9.",
+        "doi-asserted-by": "publisher",
+        "key": "ref83",
+        "unstructured": "Huang ZJ, Patel B, Lu WH, Yang TY, Tung WC, Bu\u010dinskas V, et al. Yeast cell detection using fuzzy automatic contrast enhancement (FACE) and you only look once (YOLO). Scientific Reports. 2023; 13: 16222."
+      },
+      {
+        "DOI": "10.1051/e3sconf/202123302012.",
+        "doi-asserted-by": "publisher",
+        "key": "ref84",
+        "unstructured": "Liu S, Gai Z, Chai X, Guo F, Zhang M, Xu S, et al. Bacterial colonies detecting and counting based on enhanced CNN detection method. E3S Web of Conferences. 2021; 233: 02012."
+      },
+      {
+        "DOI": "10.9781/ijimai.2023.08.001.",
+        "doi-asserted-by": "publisher",
+        "key": "ref85",
+        "unstructured": "L\u00f3pez Fl\u00f3rez S, Gonz\u00e1lez-Briones A, Hern\u00e1ndez G, Ramos C, de la Prieta F. Automatic Cell Counting With YOLOv5: A Fluorescence Microscopy Approach. International Journal of Interactive Multimedia and Artificial Intelligence. 2023; 8: 64."
+      },
+      {
+        "DOI": "10.1016/j.compbiomed.2023.107875.",
+        "doi-asserted-by": "publisher",
+        "key": "ref86",
+        "unstructured": "Tarimo SA, Jang MA, Ngasa EE, Shin HB, Shin H, Woo J. WBC YOLO-ViT: 2 Way - 2 stage white blood cell detection and classification with a combination of YOLOv5 and vision transformer. Computers in Biology and Medicine. 2024; 169: 107875."
+      }
+    ],
+    "reference-count": 86,
+    "references-count": 86,
+    "resource": {
+      "primary": {
+        "URL": "https://www.imrpress.com/journal/FBL/30/3/10.31083/FBL36266"
+      }
+    },
+    "score": 82.366516,
+    "short-container-title": [
+      "Front. Biosci. (Landmark Ed)"
+    ],
+    "source": "Crossref",
+    "title": [
+      "3D Bioprinting of Cultivated Meat Followed by the Development of a Fine-Tuned YOLO Model for the Detection and Counting of Lipoblasts, Fibroblasts, and Myogenic Cells"
+    ],
+    "type": "journal-article",
+    "volume": "30"
+  },
   "Cellpose: a generalist algorithm for cellular segmentation": {
     "DOI": "10.1101/2020.02.02.931238",
     "URL": "https://doi.org/10.1101/2020.02.02.931238",
@@ -479,7 +1269,7 @@
         "URL": "http://biorxiv.org/lookup/doi/10.1101/2020.02.02.931238"
       }
     },
-    "score": 51.055122,
+    "score": 51.05526,
     "source": "Crossref",
     "subtype": "preprint",
     "title": [
@@ -1142,7 +1932,7 @@
         "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2213671119300529"
       }
     },
-    "score": 72.064995,
+    "score": 72.20818,
     "short-container-title": [
       "Stem Cell Reports"
     ],
@@ -2383,7 +3173,7 @@
         "URL": "https://www.nature.com/articles/s41467-021-22518-0"
       }
     },
-    "score": 50.759003,
+    "score": 50.759163,
     "short-container-title": [
       "Nat Commun"
     ],
@@ -4660,7 +5450,7 @@
         "URL": "https://www.mdpi.com/2073-4409/12/11/1524"
       }
     },
-    "score": 62.471306,
+    "score": 62.47137,
     "short-container-title": [
       "Cells"
     ],
@@ -4831,7 +5621,7 @@
         "URL": "https://journals.sagepub.com/doi/10.1177/1056492606288712"
       }
     },
-    "score": 21.917603,
+    "score": 21.917637,
     "short-container-title": [
       "Journal of Management Inquiry"
     ],
@@ -5495,7 +6285,7 @@
         "URL": "https://www.nature.com/articles/s41598-022-12914-x"
       }
     },
-    "score": 58.990757,
+    "score": 58.990482,
     "short-container-title": [
       "Sci Rep"
     ],
@@ -6589,7 +7379,7 @@
         "URL": "https://www.mdpi.com/2073-4409/12/2/211"
       }
     },
-    "score": 87.29462,
+    "score": 87.36536,
     "short-container-title": [
       "Cells"
     ],
@@ -7551,7 +8341,7 @@
         "URL": "https://www.nature.com/articles/s41592-024-02580-4"
       }
     },
-    "score": 33.5824,
+    "score": 33.58249,
     "short-container-title": [
       "Nat Methods"
     ],
@@ -8392,7 +9182,7 @@
         "URL": "http://biorxiv.org/lookup/doi/10.1101/2021.03.01.431313"
       }
     },
-    "score": 66.51383,
+    "score": 66.53525,
     "source": "Crossref",
     "subtype": "preprint",
     "title": [

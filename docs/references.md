@@ -26,4 +26,5 @@ This list is auto-generated from local PDFs under `private/papers/` (which are *
   - DOI: `10.3390/cells12020211`
 - **[Evaluating Differentiation Status of Mesenchymal Stem Cells by Label-Free Microscopy System and Machine Learning](https://doi.org/10.3390/cells12111524)** (2023 — Cells)
   - DOI: `10.3390/cells12111524`
-- **paper_9** (missing title metadata — set in references/title_overrides.json)
+- **[3D Bioprinting of Cultivated Meat Followed by the Development of a Fine-Tuned YOLO Model for the Detection and Counting of Lipoblasts, Fibroblasts, and Myogenic Cells](https://doi.org/10.31083/fbl36266)** (2025 — Frontiers in Bioscience-Landmark)
+  - DOI: `10.31083/fbl36266`

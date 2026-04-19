@@ -215,11 +215,20 @@
   {
     "paper_id": "paper_9",
     "pdf_file": "private/papers/paper_9.pdf",
-    "title": null,
-    "doi": null,
-    "url": null,
-    "year": null,
-    "venue": null,
-    "authors": null
+    "title": "3D Bioprinting of Cultivated Meat Followed by the Development of a Fine-Tuned YOLO Model for the Detection and Counting of Lipoblasts, Fibroblasts, and Myogenic Cells",
+    "doi": "10.31083/fbl36266",
+    "url": "https://doi.org/10.31083/fbl36266",
+    "year": 2025,
+    "venue": "Frontiers in Bioscience-Landmark",
+    "authors": [
+      "Rozaliia Nabiullina",
+      "Sergey Golovin",
+      "Evgeniya Kirichenko",
+      "Mikhail Petrushan",
+      "Alexander Logvinov",
+      "Marya Kaplya",
+      "Darya Sedova",
+      "Stanislav Rodkin"
+    ]
   }
 ]
