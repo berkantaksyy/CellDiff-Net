@@ -1,5 +1,8 @@
-title: ML-Based Identification of Stem Cell Differentiation States
-description: Project hub + literature review for microscopy-based stem cell state classification
+title: CellDiff-Net
+description: ML-Based Identification of Stem Cell Differentiation States from Microscopy Images
 theme: jekyll-theme-cayman
 markdown: kramdown
 show_downloads: false
+
+# index.html has no front matter — Jekyll copies it as static HTML (theme not applied).
+# references.md has front matter — Jekyll applies the Cayman theme to it.

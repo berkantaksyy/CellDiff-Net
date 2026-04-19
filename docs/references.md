@@ -1,12 +1,14 @@
 ---
-title: References
+title: References — CellDiff-Net
 ---
 
-# References
+[← Back to Home](/)&nbsp;&nbsp;·&nbsp;&nbsp;[📊 Slides](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx)&nbsp;&nbsp;·&nbsp;&nbsp;[GitHub](https://github.com/berkantaksyy/CellDiff-Net)
 
-This list is auto-generated from local PDFs under `private/papers/` (which are *not* committed).
+# 📚 References
 
-[← Home]({{ "/" | relative_url }})
+Curated literature for this project. Click any title to open the paper via DOI.
+
+> Papers are cited by DOI only — PDFs are not published here for copyright reasons.
 
 - **[Deep Learning Neural Networks Highly Predict Very Early Onset of Pluripotent Stem Cell Differentiation](https://doi.org/10.1016/j.stemcr.2019.02.004)** (2019 — Stem Cell Reports)
   - DOI: `10.1016/j.stemcr.2019.02.004`
