@@ -1,0 +1,17 @@
+.DS_Store
+
+# Never publish PDFs of papers (keep local only)
+/private/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+Icon?
