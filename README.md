@@ -4,67 +4,45 @@
 
 [![Website](https://img.shields.io/badge/🌐%20Website-Live-brightgreen)](https://berkantaksyy.github.io/CellDiff-Net/)
 [![Slides](https://img.shields.io/badge/📊%20Slides-View%20Online-blue)](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx)
-[![Paper](https://img.shields.io/badge/📄%20Paper-Coming%20Soon-lightgrey)]()
-[![Status](https://img.shields.io/badge/Status-Literature%20Review-orange)]()
+[![PDF](https://img.shields.io/badge/📄%20PDF-Download-informational)](https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pdf)
+[![Paper](https://img.shields.io/badge/✍️%20Paper-Coming%20Soon-lightgrey)]()
 
-> A project at the intersection of **deep learning** and **cell biology** — using microscopy images to automatically identify and quantify stem cell differentiation states, enabling reproducible, label-free biological analysis.
+> Literature review and systematic analysis of deep learning / machine learning approaches for identifying stem cell differentiation states from microscopy images — prepared for **BME418: Stem Cells and Clinical Applications**.
+
+---
+
+## 👥 Authors
+
+**Berkant AKSOY** (210402043) · **Elif BURAK** (210402056) · **Sarya Rojin GÖNÜLDAŞ** (230402052)
 
 ---
 
 ## 📂 Resources
 
-| | Resource | Description | Link |
-|---|---|---|---|
-| 🌐 | **Website** | Project overview, slides & references | [berkantaksyy.github.io/CellDiff-Net](https://berkantaksyy.github.io/CellDiff-Net/) |
-| 📊 | **Slides** | Literature review presentation | [▶ View online](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx) · [⬇ Download PPTX](https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pptx) |
-| 📄 | **Paper** | Research article | 🚧 Coming soon |
-| 📚 | **References** | Curated literature with DOIs | [View References](https://berkantaksyy.github.io/CellDiff-Net/references) |
-| 📖 | **BibTeX** | Citation file | [references.bib](references/references.bib) |
+| | Resource | Link |
+|---|---|---|
+| 🌐 | **Website** | [berkantaksyy.github.io/CellDiff-Net](https://berkantaksyy.github.io/CellDiff-Net/) |
+| 📊 | **Slides** | [▶ View online](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx) · [⬇ Download PPTX](https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pptx) |
+| 📄 | **PDF** | [⬇ Download PDF](https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pdf) |
+| 📚 | **References** | [View on website](https://berkantaksyy.github.io/CellDiff-Net/references) · [BibTeX](references/references.bib) |
+| ✍️ | **Paper** | 🚧 Coming soon |
 
 ---
 
-## 🧬 Problem & Motivation
+## 📑 Papers Reviewed
 
-Stem cell differentiation is a complex, multi-stage biological process. Traditional methods rely on molecular markers or expert visual inspection — both slow and subjective. This project asks:
-
-> **Can a deep learning model learn to identify differentiation states directly from microscopy images, without requiring expensive labels?**
-
----
-
-## 🗺️ Proposed Pipeline
-
-```
-Raw Microscopy Images
-        │
-        ▼
- Preprocessing & QC          ← illumination correction, normalization
-        │
-        ▼
-  Segmentation (optional)    ← Cellpose / SAM-based cell extraction
-        │
-        ▼
- Representation Learning      ← CNN / ViT (self-supervised or supervised)
-        │
-        ▼
-  State Prediction            ← classification (early/late) or regression (score)
-        │
-        ▼
-  Evaluation & Explainability ← calibration, saliency, biological validation
-```
-
----
-
-## 📋 Roadmap
-
-- [x] Literature review & reference management
-- [x] Slide deck (literature review)
-- [x] Project website (GitHub Pages)
-- [ ] Dataset curation plan
-- [ ] CNN baseline on whole frames
-- [ ] Segmentation-assisted pipeline
-- [ ] Self-supervised representation learning
-- [ ] Explainability & biological validation
-- [ ] Research paper / preprint
+| # | Authors (Year) | Title | Method | Venue |
+|---|---|---|---|---|
+| 1 | Waisman et al. (2019) | [Deep Learning Neural Networks Highly Predict Very Early Onset of Pluripotent Stem Cell Differentiation](https://doi.org/10.1016/j.stemcr.2019.02.004) | CNN | *Stem Cell Reports* |
+| 2 | Stringer et al. (2021) | [Cellpose: A Generalist Algorithm for Cellular Segmentation](https://doi.org/10.1038/s41592-020-01018-x) | U-Net | *Nature Methods* |
+| 3 | Chamier et al. (2021) | [Democratising Deep Learning for Microscopy with ZeroCostDL4Mic](https://doi.org/10.1038/s41467-021-22518-0) | Platform | *Nature Communications* |
+| 4 | Mota et al. (2021) | [Automated MSC Segmentation and Machine Learning-Based Phenotype Classification](https://doi.org/10.1117/1.JMI.8.1.014503) | Classical ML | *J. Med. Imaging* |
+| 5 | Greenwald et al. (2022) | [Whole-Cell Segmentation of Tissue Images with Human-Level Performance](https://doi.org/10.1038/s41587-021-01094-0) | Panoptic FPN | *Nature Biotechnology* |
+| 6 | Cross-Zamirski et al. (2022) | [Label-Free Prediction of Cell Painting from Brightfield Images](https://doi.org/10.1038/s41598-022-12914-x) | U-Net / cWGAN | *Scientific Reports* |
+| 7 | Lien et al. (2023) | [Recognizing the Differentiation Degree of Human iPSC-Derived RPE Cells](https://doi.org/10.3390/cells12020211) | CNN + PCA + SVM | *Cells* |
+| 8 | Kong et al. (2023) | [Evaluating Differentiation Status of MSCs by Label-Free Microscopy and ML](https://doi.org/10.3390/cells12111524) | K-means++ | *Cells* |
+| 9 | Nabiullina et al. (2025) | [3D Bioprinting of Cultivated Meat with YOLOv8-seg Cell Monitoring](https://doi.org/10.31083/fbl36266) | YOLOv8-seg | *Front. Bioscience* |
+| 10 | Archit et al. (2025) | [Segment Anything for Microscopy](https://doi.org/10.1038/s41592-024-02580-4) | ViT / SAM | *Nature Methods* |
 
 ---
 
@@ -72,62 +50,42 @@ Raw Microscopy Images
 
 ```
 CellDiff-Net/
-├── docs/              # GitHub Pages site (auto-deployed)
+├── docs/              # GitHub Pages site
 │   ├── index.html     # Landing page
-│   └── references.md  # Auto-generated references
-├── slides/            # Presentation slides
-│   └── StemCell_DL_LiteratureReview.pptx
-├── references/        # Generated reference artifacts
+│   └── references.md  # Literature list
+├── slides/            # Presentation files
+│   ├── StemCell_DL_LiteratureReview.pptx
+│   └── StemCell_DL_LiteratureReview.pdf
+├── references/        # Reference artifacts
 │   ├── references.bib
 │   └── papers.json
 ├── tools/             # Helper scripts
-│   └── update_references.py
 └── private/           # Local-only (git-ignored)
-    └── papers/        # Personal PDF copies
 ```
 
 ---
 
-## 🔧 Usage
-
-### Update the reference list
-
-Paper PDFs are kept locally under `private/papers/` (git-ignored). To regenerate the public reference list from your local PDFs:
+## 🔧 Update References
 
 ```bash
-# Recommended: identify yourself to Crossref
 export CROSSREF_MAILTO="berkantaksyy@gmail.com"
-
 python3 tools/update_references.py --refresh
 ```
 
-If a PDF has missing metadata, add its title to `references/title_overrides.json` and re-run.
-
 ---
 
-## 🌐 GitHub Pages Setup
+## 🌐 GitHub Pages
 
-The site is published from the `/docs` folder on `main`:
+Published from `/docs` on `main`. Setup: **Settings → Pages → Branch: main / Folder: /docs**
 
-1. Go to **Settings → Pages**
-2. **Source**: Deploy from a branch
-3. **Branch**: `main` / **Folder**: `/docs`
-4. Site will be live at `https://berkantaksyy.github.io/CellDiff-Net/`
-
----
-
-## 📝 How to Cite
-
-Once the paper is published, a BibTeX entry will be added here. In the meantime, you can link to this repository and cite the original papers on the [References page](https://berkantaksyy.github.io/CellDiff-Net/references).
+Live at: [berkantaksyy.github.io/CellDiff-Net](https://berkantaksyy.github.io/CellDiff-Net/)
 
 ---
 
 ## ⚖️ Ethics & Copyright
 
-Paper PDFs are **not committed** to this repository to respect publisher copyright. The repository stores citations, DOIs, and links only. Personal PDF copies should be kept locally under `private/papers/` (git-ignored).
-
----
+Paper PDFs are not committed to this repository. Only citations and DOI links are published.
 
 ## 📜 License
 
-TBD — will be added before any model code or data is published.
+TBD

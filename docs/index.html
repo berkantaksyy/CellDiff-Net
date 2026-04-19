@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CellDiff-Net — ML-Based Stem Cell Differentiation from Microscopy Images</title>
-  <meta name="description" content="Using deep learning and microscopy images to identify stem cell differentiation states. Literature review, slides, and upcoming research paper." />
+  <meta name="description" content="A systematic literature review of deep learning and machine learning approaches for identifying stem cell differentiation states from microscopy images." />
   <style>
-    /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -16,161 +15,154 @@
       color: #2d2d2d;
       background: #fafafa;
     }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
 
-    /* ── Layout ── */
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ── Header ── */
+    /* ── HEADER ── */
     header {
       background: #fff;
       border-bottom: 1px solid #e8e8e8;
-      padding: 56px 0 40px;
+      padding: 52px 0 40px;
       text-align: center;
     }
-    header .venue-tag {
+    .course-tag {
       display: inline-block;
       background: #f0f4ff;
       color: #3a5bd9;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
       padding: 4px 12px;
       border-radius: 4px;
       margin-bottom: 18px;
     }
     header h1 {
-      font-size: 1.85rem;
+      font-size: 1.8rem;
       font-weight: 700;
       line-height: 1.25;
       color: #111;
       max-width: 680px;
-      margin: 0 auto 16px;
-    }
-    header .subtitle {
-      font-size: 1.0rem;
-      color: #555;
-      max-width: 600px;
-      margin: 0 auto 28px;
+      margin: 0 auto 14px;
     }
     .authors {
-      font-size: 0.95rem;
-      color: #444;
-      margin-bottom: 32px;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 28px;
     }
-    .authors a {
-      color: #3a5bd9;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .authors a:hover { text-decoration: underline; }
+    .authors span { margin: 0 6px; }
+    .authors .sep { color: #ccc; }
 
-    /* ── Link Buttons ── */
+    /* ── BUTTONS ── */
     .link-buttons {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      margin-bottom: 8px;
     }
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 6px;
       padding: 9px 18px;
       border-radius: 6px;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.15s ease;
+      transition: all 0.14s ease;
       border: 1px solid transparent;
+      cursor: pointer;
     }
-    .btn-primary {
-      background: #111;
-      color: #fff;
-      border-color: #111;
-    }
-    .btn-primary:hover { background: #333; border-color: #333; }
-    .btn-outline {
-      background: #fff;
-      color: #2d2d2d;
-      border-color: #d0d0d0;
-    }
+    .btn-dark  { background: #111; color: #fff; border-color: #111; }
+    .btn-dark:hover { background: #333; }
+    .btn-outline { background: #fff; color: #2d2d2d; border-color: #d0d0d0; }
     .btn-outline:hover { background: #f5f5f5; border-color: #aaa; }
-    .btn-disabled {
-      background: #f5f5f5;
-      color: #999;
-      border-color: #e0e0e0;
-      cursor: default;
-      pointer-events: none;
-    }
-    .btn svg {
-      width: 16px; height: 16px;
-      flex-shrink: 0;
-    }
+    .btn-muted  { background: #f5f5f5; color: #999; border-color: #e5e5e5; pointer-events: none; cursor: default; }
+    .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
 
-    /* ── Main content ── */
-    main {
-      padding: 52px 0 80px;
-    }
-
-    section { margin-bottom: 52px; }
-
+    /* ── MAIN ── */
+    main { padding: 48px 0 80px; }
+    section { margin-bottom: 48px; }
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: #111;
       border-bottom: 2px solid #111;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-      letter-spacing: -0.01em;
+      padding-bottom: 7px;
+      margin-bottom: 18px;
     }
 
-    /* ── Abstract ── */
-    .abstract-text {
-      font-size: 0.97rem;
-      color: #333;
+    /* ── ABSTRACT ── */
+    .abstract-box {
       background: #fff;
       border: 1px solid #e8e8e8;
       border-radius: 8px;
-      padding: 22px 26px;
+      padding: 20px 24px;
+      font-size: 0.95rem;
+      color: #333;
       line-height: 1.8;
     }
 
-    /* ── Resource cards ── */
+    /* ── PAPER TABLE ── */
+    .paper-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    .paper-table th {
+      text-align: left;
+      font-weight: 700;
+      color: #555;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 2px solid #e8e8e8;
+      padding: 8px 10px;
+      background: #fafafa;
+    }
+    .paper-table td {
+      padding: 10px 10px;
+      border-bottom: 1px solid #f0f0f0;
+      vertical-align: top;
+    }
+    .paper-table tr:last-child td { border-bottom: none; }
+    .paper-table tr:hover td { background: #fafbff; }
+    .paper-table .num {
+      color: #aaa;
+      font-weight: 700;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+    .paper-table a { color: #3a5bd9; text-decoration: none; font-weight: 500; }
+    .paper-table a:hover { text-decoration: underline; }
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .tag-dl   { background: #e8f0fe; color: #3a5bd9; }
+    .tag-ml   { background: #fce8e6; color: #c5221f; }
+    .tag-hybrid { background: #e6f4ea; color: #137333; }
+    .venue { font-size: 0.78rem; color: #777; display: block; margin-top: 2px; }
+
+    /* ── RESOURCE CARDS ── */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
     }
     .card {
       background: #fff;
       border: 1px solid #e8e8e8;
       border-radius: 8px;
-      padding: 20px;
-      transition: box-shadow 0.15s ease, border-color 0.15s ease;
+      padding: 18px;
+      transition: box-shadow 0.14s, border-color 0.14s;
     }
-    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); border-color: #ccc; }
-    .card .card-icon { font-size: 1.5rem; margin-bottom: 10px; }
-    .card .card-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 6px;
-    }
-    .card .card-desc {
-      font-size: 0.82rem;
-      color: #666;
-      margin-bottom: 14px;
-      line-height: 1.5;
-    }
-    .card .card-links { display: flex; flex-wrap: wrap; gap: 6px; }
-    .card-link {
-      font-size: 0.78rem;
+    .card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.07); border-color: #ccc; }
+    .card-icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .card-title { font-size: 0.92rem; font-weight: 700; color: #111; margin-bottom: 5px; }
+    .card-desc { font-size: 0.8rem; color: #666; margin-bottom: 12px; line-height: 1.5; }
+    .card-links { display: flex; flex-wrap: wrap; gap: 6px; }
+    .cl {
+      font-size: 0.76rem;
       font-weight: 600;
       padding: 4px 10px;
       border-radius: 4px;
@@ -178,93 +170,17 @@
       border: 1px solid #d0d0d0;
       color: #2d2d2d;
       background: #fff;
-      transition: all 0.12s;
+      transition: background 0.12s;
     }
-    .card-link:hover { background: #f0f0f0; }
-    .card-link.primary {
-      background: #111;
-      color: #fff;
-      border-color: #111;
-    }
-    .card-link.primary:hover { background: #333; }
-    .card-link.soon {
-      background: #f5f5f5;
-      color: #aaa;
-      border-color: #e5e5e5;
-      cursor: default;
-      pointer-events: none;
-    }
+    .cl:hover { background: #f0f0f0; }
+    .cl.primary { background: #111; color: #fff; border-color: #111; }
+    .cl.primary:hover { background: #333; }
+    .cl.soon { background: #f5f5f5; color: #bbb; border-color: #eee; pointer-events: none; cursor: default; }
 
-    /* ── Pipeline ── */
-    .pipeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      max-width: 520px;
-    }
-    .pipeline-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-    .pipeline-line {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 28px;
-      flex-shrink: 0;
-    }
-    .pipeline-dot {
-      width: 10px; height: 10px;
-      border-radius: 50%;
-      background: #3a5bd9;
-      flex-shrink: 0;
-      margin-top: 5px;
-    }
-    .pipeline-connector {
-      width: 2px;
-      height: 32px;
-      background: #d0d8f0;
-      margin: 2px 0;
-    }
-    .pipeline-step:last-child .pipeline-connector { display: none; }
-    .pipeline-content { padding-bottom: 8px; }
-    .pipeline-label {
-      font-weight: 600;
-      font-size: 0.92rem;
-      color: #111;
-    }
-    .pipeline-sub {
-      font-size: 0.8rem;
-      color: #666;
-    }
-
-    /* ── Roadmap ── */
-    .roadmap-list { list-style: none; }
-    .roadmap-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 7px 0;
-      font-size: 0.92rem;
-      border-bottom: 1px solid #f0f0f0;
-      color: #333;
-    }
-    .roadmap-list li:last-child { border-bottom: none; }
-    .check {
-      width: 18px; height: 18px;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      font-size: 0.65rem;
-    }
-    .check.done { background: #d4edda; color: #28a745; font-weight: 700; }
-    .check.todo { background: #f0f0f0; color: #bbb; }
-
-    /* ── Footer ── */
+    /* ── FOOTER ── */
     footer {
       text-align: center;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #aaa;
       padding: 24px;
       border-top: 1px solid #e8e8e8;
@@ -273,69 +189,68 @@
     footer a { color: #888; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
-    /* ── Responsive ── */
     @media (max-width: 600px) {
-      header h1 { font-size: 1.4rem; }
-      .cards { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.35rem; }
+      .paper-table .venue { display: none; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── HEADER ── -->
+<!-- HEADER -->
 <header>
   <div class="container">
-    <div class="venue-tag">🔬 Deep Learning · Cell Biology · Microscopy</div>
+    <div class="course-tag">BME418 · Stem Cells and Clinical Applications</div>
     <h1>ML-Based Identification of Stem Cell Differentiation States from Microscopy Images</h1>
-    <p class="subtitle">
-      Combining representation learning, segmentation, and biological interpretability
-      to identify stem cell differentiation states from label-free microscopy.
-    </p>
     <div class="authors">
-      <a href="https://github.com/berkantaksyy">Berkant Aksyy</a>
+      <span>Berkant Aksoy</span>
+      <span class="sep">·</span>
+      <span>Elif Burak</span>
+      <span class="sep">·</span>
+      <span>Sarya Rojin Gönüldaş</span>
     </div>
-
     <div class="link-buttons">
-      <!-- GitHub -->
-      <a class="btn btn-primary" href="https://github.com/berkantaksyy/CellDiff-Net">
+      <a class="btn btn-dark" href="https://github.com/berkantaksyy/CellDiff-Net">
         <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         GitHub
       </a>
-      <!-- Slides -->
       <a class="btn btn-outline" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         Slides
       </a>
-      <!-- Paper -->
-      <span class="btn btn-disabled">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        Paper (Coming Soon)
-      </span>
-      <!-- References -->
+      <a class="btn btn-outline" href="https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        PDF
+      </a>
       <a class="btn btn-outline" href="references">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
         References
       </a>
+      <span class="btn btn-muted">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Paper — Coming Soon
+      </span>
     </div>
   </div>
 </header>
 
-<!-- ── MAIN ── -->
+<!-- MAIN -->
 <main>
   <div class="container">
 
     <!-- Abstract -->
     <section>
       <h2>Abstract</h2>
-      <p class="abstract-text">
-        Identifying stem cell differentiation states is a fundamental challenge in cell biology,
-        typically addressed through molecular markers or time-consuming expert visual inspection.
-        This project investigates whether deep learning models can learn to classify or score
-        differentiation states <em>directly from microscopy images</em>, in a label-free and
-        reproducible manner. The current phase focuses on a systematic literature review of
-        existing approaches — spanning cell segmentation, representation learning, and
-        self-supervised methods — to define a robust pipeline for future experimental validation.
-        Model training and evaluation code will be added as the project matures.
+      <p class="abstract-box">
+        Identifying stem cell differentiation states is a fundamental challenge in cell biology and
+        regenerative medicine. This work presents a systematic review of ten recent publications
+        spanning deep learning, classical machine learning, and hybrid approaches for analyzing
+        stem cell morphology from microscopy images. We survey methods across brightfield,
+        phase-contrast, confocal, and label-free imaging modalities, covering key tasks including
+        cell segmentation, differentiation state classification, virtual staining, and quality
+        control for clinical-grade iPSC manufacturing. We identify persistent gaps in the
+        literature — particularly regarding cross-line generalization, 3D organoid analysis,
+        and regulatory-grade validation — and outline directions for future research.
       </p>
     </section>
 
@@ -343,123 +258,154 @@
     <section>
       <h2>Resources</h2>
       <div class="cards">
-
         <div class="card">
           <div class="card-icon">📊</div>
-          <div class="card-title">Literature Review Slides</div>
-          <div class="card-desc">Presentation covering key papers in microscopy-based cell state identification and deep learning approaches.</div>
+          <div class="card-title">Presentation Slides</div>
+          <div class="card-desc">Full literature review slide deck covering all 10 papers.</div>
           <div class="card-links">
-            <a class="card-link primary" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx" target="_blank" rel="noopener">▶ View Slides</a>
-            <a class="card-link" href="https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pptx" download>⬇ Download</a>
+            <a class="cl primary" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx" target="_blank" rel="noopener">▶ View</a>
+            <a class="cl" href="https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pptx" download>⬇ PPTX</a>
+            <a class="cl" href="https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pdf" target="_blank">⬇ PDF</a>
           </div>
         </div>
-
-        <div class="card">
-          <div class="card-icon">📄</div>
-          <div class="card-title">Research Paper</div>
-          <div class="card-desc">Full research article describing the methodology, experiments, and findings of this project.</div>
-          <div class="card-links">
-            <span class="card-link soon">🚧 Coming Soon</span>
-          </div>
-        </div>
-
         <div class="card">
           <div class="card-icon">📚</div>
           <div class="card-title">References</div>
-          <div class="card-desc">Curated list of papers with DOIs, covering segmentation, representation learning, and stem cell imaging.</div>
+          <div class="card-desc">All 10 papers with titles, DOIs, and venues.</div>
           <div class="card-links">
-            <a class="card-link primary" href="references">View References</a>
+            <a class="cl primary" href="references">View References</a>
+            <a class="cl" href="https://github.com/berkantaksyy/CellDiff-Net/blob/main/references/references.bib">BibTeX</a>
           </div>
         </div>
-
         <div class="card">
-          <div class="card-icon">💻</div>
-          <div class="card-title">Code &amp; Data</div>
-          <div class="card-desc">Model training, evaluation scripts, and dataset documentation will be released here.</div>
+          <div class="card-icon">✍️</div>
+          <div class="card-title">Research Paper</div>
+          <div class="card-desc">Full write-up of methodology, analysis, and findings.</div>
           <div class="card-links">
-            <span class="card-link soon">🚧 Coming Soon</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Pipeline -->
-    <section>
-      <h2>Proposed Pipeline</h2>
-      <div class="pipeline">
-        <div class="pipeline-step">
-          <div class="pipeline-line"><div class="pipeline-dot"></div><div class="pipeline-connector"></div></div>
-          <div class="pipeline-content">
-            <div class="pipeline-label">Raw Microscopy Images</div>
-            <div class="pipeline-sub">Brightfield, phase-contrast, or fluorescence input</div>
-          </div>
-        </div>
-        <div class="pipeline-step">
-          <div class="pipeline-line"><div class="pipeline-dot"></div><div class="pipeline-connector"></div></div>
-          <div class="pipeline-content">
-            <div class="pipeline-label">Preprocessing &amp; QC</div>
-            <div class="pipeline-sub">Illumination correction, normalization, plate/batch leakage controls</div>
-          </div>
-        </div>
-        <div class="pipeline-step">
-          <div class="pipeline-line"><div class="pipeline-dot"></div><div class="pipeline-connector"></div></div>
-          <div class="pipeline-content">
-            <div class="pipeline-label">Segmentation <span style="font-weight:400;color:#999">(optional)</span></div>
-            <div class="pipeline-sub">Cellpose / SAM-based cell extraction and masking</div>
-          </div>
-        </div>
-        <div class="pipeline-step">
-          <div class="pipeline-line"><div class="pipeline-dot"></div><div class="pipeline-connector"></div></div>
-          <div class="pipeline-content">
-            <div class="pipeline-label">Representation Learning</div>
-            <div class="pipeline-sub">CNN / ViT backbone, self-supervised or supervised training</div>
-          </div>
-        </div>
-        <div class="pipeline-step">
-          <div class="pipeline-line"><div class="pipeline-dot"></div><div class="pipeline-connector"></div></div>
-          <div class="pipeline-content">
-            <div class="pipeline-label">State Prediction</div>
-            <div class="pipeline-sub">Classification (early/late) or regression (continuous differentiation score)</div>
-          </div>
-        </div>
-        <div class="pipeline-step">
-          <div class="pipeline-line"><div class="pipeline-dot"></div></div>
-          <div class="pipeline-content">
-            <div class="pipeline-label">Evaluation &amp; Explainability</div>
-            <div class="pipeline-sub">Calibration, saliency maps, feature clustering, biological validation</div>
+            <span class="cl soon">🚧 Coming Soon</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Roadmap -->
+    <!-- Papers Reviewed -->
     <section>
-      <h2>Roadmap</h2>
-      <ul class="roadmap-list">
-        <li><span class="check done">✓</span> Literature review &amp; reference management</li>
-        <li><span class="check done">✓</span> Slide deck — literature review presentation</li>
-        <li><span class="check done">✓</span> Project website (GitHub Pages)</li>
-        <li><span class="check todo">○</span> Dataset curation plan</li>
-        <li><span class="check todo">○</span> CNN baseline on whole frames</li>
-        <li><span class="check todo">○</span> Segmentation-assisted pipeline</li>
-        <li><span class="check todo">○</span> Self-supervised representation learning</li>
-        <li><span class="check todo">○</span> Explainability &amp; biological validation</li>
-        <li><span class="check todo">○</span> Research paper / preprint</li>
-      </ul>
+      <h2>Papers Reviewed</h2>
+      <table class="paper-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Authors (Year)</th>
+            <th>Title &amp; Venue</th>
+            <th>Method</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">1</td>
+            <td>Waisman et al.<br><small style="color:#999">2019</small></td>
+            <td>
+              <a href="https://doi.org/10.1016/j.stemcr.2019.02.004" target="_blank" rel="noopener">Deep Learning Neural Networks Highly Predict Very Early Onset of Pluripotent Stem Cell Differentiation</a>
+              <span class="venue">Stem Cell Reports</span>
+            </td>
+            <td><span class="tag tag-dl">DL · CNN</span></td>
+          </tr>
+          <tr>
+            <td class="num">2</td>
+            <td>Stringer et al.<br><small style="color:#999">2021</small></td>
+            <td>
+              <a href="https://doi.org/10.1038/s41592-020-01018-x" target="_blank" rel="noopener">Cellpose: A Generalist Algorithm for Cellular Segmentation</a>
+              <span class="venue">Nature Methods</span>
+            </td>
+            <td><span class="tag tag-dl">DL · U-Net</span></td>
+          </tr>
+          <tr>
+            <td class="num">3</td>
+            <td>Chamier et al.<br><small style="color:#999">2021</small></td>
+            <td>
+              <a href="https://doi.org/10.1038/s41467-021-22518-0" target="_blank" rel="noopener">Democratising Deep Learning for Microscopy with ZeroCostDL4Mic</a>
+              <span class="venue">Nature Communications</span>
+            </td>
+            <td><span class="tag tag-dl">DL · Platform</span></td>
+          </tr>
+          <tr>
+            <td class="num">4</td>
+            <td>Mota et al.<br><small style="color:#999">2021</small></td>
+            <td>
+              <a href="https://doi.org/10.1117/1.JMI.8.1.014503" target="_blank" rel="noopener">Automated MSC Segmentation and Machine Learning-Based Phenotype Classification</a>
+              <span class="venue">Journal of Medical Imaging</span>
+            </td>
+            <td><span class="tag tag-ml">ML · SVM</span></td>
+          </tr>
+          <tr>
+            <td class="num">5</td>
+            <td>Greenwald et al.<br><small style="color:#999">2022</small></td>
+            <td>
+              <a href="https://doi.org/10.1038/s41587-021-01094-0" target="_blank" rel="noopener">Whole-Cell Segmentation of Tissue Images with Human-Level Performance</a>
+              <span class="venue">Nature Biotechnology</span>
+            </td>
+            <td><span class="tag tag-dl">DL · FPN</span></td>
+          </tr>
+          <tr>
+            <td class="num">6</td>
+            <td>Cross-Zamirski et al.<br><small style="color:#999">2022</small></td>
+            <td>
+              <a href="https://doi.org/10.1038/s41598-022-12914-x" target="_blank" rel="noopener">Label-Free Prediction of Cell Painting from Brightfield Images</a>
+              <span class="venue">Scientific Reports</span>
+            </td>
+            <td><span class="tag tag-dl">DL · GAN</span></td>
+          </tr>
+          <tr>
+            <td class="num">7</td>
+            <td>Lien et al.<br><small style="color:#999">2023</small></td>
+            <td>
+              <a href="https://doi.org/10.3390/cells12020211" target="_blank" rel="noopener">Recognizing the Differentiation Degree of Human iPSC-Derived RPE Cells</a>
+              <span class="venue">Cells</span>
+            </td>
+            <td><span class="tag tag-hybrid">Hybrid · CNN+SVM</span></td>
+          </tr>
+          <tr>
+            <td class="num">8</td>
+            <td>Kong et al.<br><small style="color:#999">2023</small></td>
+            <td>
+              <a href="https://doi.org/10.3390/cells12111524" target="_blank" rel="noopener">Evaluating Differentiation Status of MSCs by Label-Free Microscopy and ML</a>
+              <span class="venue">Cells</span>
+            </td>
+            <td><span class="tag tag-ml">ML · K-means++</span></td>
+          </tr>
+          <tr>
+            <td class="num">9</td>
+            <td>Nabiullina et al.<br><small style="color:#999">2025</small></td>
+            <td>
+              <a href="https://doi.org/10.31083/fbl36266" target="_blank" rel="noopener">3D Bioprinting of Cultivated Meat with YOLOv8-seg Cell Monitoring</a>
+              <span class="venue">Frontiers in Bioscience</span>
+            </td>
+            <td><span class="tag tag-dl">DL · YOLO</span></td>
+          </tr>
+          <tr>
+            <td class="num">10</td>
+            <td>Archit et al.<br><small style="color:#999">2025</small></td>
+            <td>
+              <a href="https://doi.org/10.1038/s41592-024-02580-4" target="_blank" rel="noopener">Segment Anything for Microscopy</a>
+              <span class="venue">Nature Methods</span>
+            </td>
+            <td><span class="tag tag-dl">DL · ViT/SAM</span></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
   </div>
 </main>
 
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer>
   <p>
     <a href="https://github.com/berkantaksyy/CellDiff-Net">GitHub</a> ·
     <a href="references">References</a> ·
     <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx" target="_blank" rel="noopener">Slides</a>
     <br><br>
-    © 2025 Berkant Aksyy · CellDiff-Net
+    Berkant Aksoy · Elif Burak · Sarya Rojin Gönüldaş — BME418, 2025
   </p>
 </footer>
 

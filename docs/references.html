@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>References — CellDiff-Net</title>
+  <meta name="description" content="Full reference list for the CellDiff-Net literature review on ML-based stem cell differentiation identification." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #2d2d2d;
+      background: #fafafa;
+    }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── NAV ── */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 14px 0;
+    }
+    nav .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    nav .brand {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #111;
+      text-decoration: none;
+    }
+    nav .navlinks { display: flex; gap: 16px; }
+    nav a {
+      font-size: 0.83rem;
+      color: #555;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover { color: #111; }
+
+    /* ── HEADER ── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 40px 0 32px;
+    }
+    header h1 { font-size: 1.5rem; font-weight: 700; color: #111; margin-bottom: 6px; }
+    header p { font-size: 0.9rem; color: #666; }
+
+    /* ── MAIN ── */
+    main { padding: 40px 0 80px; }
+
+    .ref-list { display: flex; flex-direction: column; gap: 0; }
+    .ref-item {
+      display: flex;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .ref-item:last-child { border-bottom: none; }
+    .ref-num {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #aaa;
+      min-width: 24px;
+      padding-top: 2px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .ref-body { flex: 1; min-width: 0; }
+    .ref-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #111;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .ref-title:hover { color: #3a5bd9; text-decoration: underline; }
+    .ref-meta {
+      font-size: 0.82rem;
+      color: #666;
+      margin-top: 3px;
+    }
+    .ref-meta .venue { font-style: italic; }
+    .ref-tags { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+    .tag-dl     { background: #e8f0fe; color: #3a5bd9; }
+    .tag-ml     { background: #fce8e6; color: #c5221f; }
+    .tag-hybrid { background: #e6f4ea; color: #137333; }
+    .doi-link {
+      font-size: 0.76rem;
+      color: #888;
+      text-decoration: none;
+      font-family: monospace;
+    }
+    .doi-link:hover { color: #3a5bd9; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #aaa;
+      padding: 24px;
+      border-top: 1px solid #e8e8e8;
+      background: #fff;
+    }
+    footer a { color: #888; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container inner">
+    <a class="brand" href="/">← CellDiff-Net</a>
+    <div class="navlinks">
+      <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx" target="_blank" rel="noopener">Slides</a>
+      <a href="https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pdf" target="_blank">PDF</a>
+      <a href="https://github.com/berkantaksyy/CellDiff-Net">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <h1>📚 References</h1>
+    <p>10 papers reviewed for the BME418 literature review on ML-based stem cell differentiation identification.</p>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+  <div class="container">
+    <div class="ref-list">
+
+      <div class="ref-item">
+        <div class="ref-num">1</div>
+        <div class="ref-body">
+          <a class="ref-title" href="https://doi.org/10.1016/j.stemcr.2019.02.004" target="_blank" rel="noopener">
+            Deep Learning Neural Networks Highly Predict Very Early Onset of Pluripotent Stem Cell Differentiation
+          </a>
+          <div class="ref-meta">
+            Waisman A. et al. (2019) — <span class="venue">Stem Cell Reports</span>, vol. 12, no. 4, pp. 845–859
+          </div>
+          <div class="ref-tags">
+            <span class="tag tag-dl">Deep Learning</span>
+            <span class="tag tag-dl">CNN</span>
+            <a class="doi-link" href="https://doi.org/10.1016/j.stemcr.2019.02.004" target="_blank">doi:10.1016/j.stemcr.2019.02.004</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-item">
+        <div class="ref-num">2</div>
+        <div class="ref-body">
+          <a class="ref-title" href="https://doi.org/10.1038/s41592-020-01018-x" target="_blank" rel="noopener">
+            Cellpose: A Generalist Algorithm for Cellular Segmentation
+          </a>
+          <div class="ref-meta">
+            Stringer C. et al. (2021) — <span class="venue">Nature Methods</span>, vol. 18, pp. 100–106
+          </div>
+          <div class="ref-tags">
+            <span class="tag tag-dl">Deep Learning</span>
+            <span class="tag tag-dl">U-Net</span>
+            <span class="tag tag-dl">Segmentation</span>
+            <a class="doi-link" href="https://doi.org/10.1038/s41592-020-01018-x" target="_blank">doi:10.1038/s41592-020-01018-x</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-item">
+        <div class="ref-num">3</div>
+        <div class="ref-body">
+          <a class="ref-title" href="https://doi.org/10.1038/s41467-021-22518-0" target="_blank" rel="noopener">
+            Democratising Deep Learning for Microscopy with ZeroCostDL4Mic
+          </a>
+          <div class="ref-meta">
+            Chamier L.V. et al. (2021) — <span class="venue">Nature Communications</span>, vol. 12, p. 2276
+          </div>
+          <div class="ref-tags">
+            <span class="tag tag-dl">Deep Learning</span>
+            <span class="tag tag-dl">Platform</span>
+            <a class="doi-link" href="https://doi.org/10.1038/s41467-021-22518-0" target="_blank">doi:10.1038/s41467-021-22518-0</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-item">
+        <div class="ref-num">4</div>
+        <div class="ref-body">
+          <a class="ref-title" href="https://doi.org/10.1117/1.JMI.8.1.014503" target="_blank" rel="noopener">
+            Automated Mesenchymal Stem Cell Segmentation and Machine Learning-Based Phenotype Classification
+          </a>
+          <div class="ref-meta">
+            Mota S.M. et al. (2021) — <span class="venue">Journal of Medical Imaging</span>, vol. 8, no. 1, p. 014503
+          </div>
+          <div class="ref-tags">
+            <span class="tag tag-ml">Classical ML</span>
+            <span class="tag tag-ml">SVM</span>
+            <span class="tag tag-ml">Feature Extraction</span>
+            <a class="doi-link" href="https://doi.org/10.1117/1.JMI.8.1.014503" target="_blank">doi:10.1117/1.JMI.8.1.014503</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-item">
+        <div class="ref-num">5</div>
+        <div class="ref-body">
+          <a class="ref-title" href="https://doi.org/10.1038/s41587-021-01094-0" target="_blank" rel="noopener">
+            Whole-Cell Segmentation of Tissue Images with Human-Level Performance Using Large-Scale Data Annotation and Deep Learning
+          </a>
+          <div class="ref-meta">
+            Greenwald N.F. et al. (2022) — <span class="venue">Nature Biotechnology</span>, vol. 40, pp. 555–565
+          </div>
+          <div class="ref-tags">
+            <span class="tag tag-dl">Deep Learning</span>
+            <span class="tag tag-dl">Panoptic FPN</span>
+            <span class="tag tag-dl">Segmentation</span>
+            <a class="doi-link" href="https://doi.org/10.1038/s41587-021-01094-0" target="_blank">doi:10.1038/s41587-021-01094-0</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-item">
+        <div class="ref-num">6</div>
+        <div class="ref-body">
+          <a class="ref-title" href="https://doi.org/10.1038/s41598-022-12914-x" target="_blank" rel="noopener">
+            Label-Free Prediction of Cell Painting from Brightfield Images
+          </a>
+          <div class="ref-meta">
+            Cross-Zamirski J.O. et al. (2022) — <span class="venue">Scientific Reports</span>, vol. 12, p. 10001
+          </div>
+          <div class="ref-tags">
+            <span class="tag tag-dl">Deep Learning</span>
+            <span class="tag tag-dl">GAN</span>
+            <span class="tag tag-dl">Virtual Staining</span>
+            <a class="doi-link" href="https://doi.org/10.1038/s41598-022-12914-x" target="_blank">doi:10.1038/s41598-022-12914-x</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-item">
+        <div class="ref-num">7</div>
+        <div class="ref-body">
+          <a class="ref-title" href="https://doi.org/10.3390/cells12020211" target="_blank" rel="noopener">
+            Recognizing the Differentiation Degree of Human Induced Pluripotent Stem Cell-Derived Retinal Pigment Epithelium Cells Using Machine Learning and Deep Learning-Based Approaches
+          </a>
+          <div class="ref-meta">
+            Lien C.-Y. et al. (2023) — <span class="venue">Cells</span>, vol. 12, no. 2, p. 211
+          </div>
+          <div class="ref-tags">
+            <span class="tag tag-hybrid">Hybrid</span>
+            <span class="tag tag-hybrid">CNN + PCA + SVM</span>
+            <a class="doi-link" href="https://doi.org/10.3390/cells12020211" target="_blank">doi:10.3390/cells12020211</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-item">
+        <div class="ref-num">8</div>
+        <div class="ref-body">
+          <a class="ref-title" href="https://doi.org/10.3390/cells12111524" target="_blank" rel="noopener">
+            Evaluating Differentiation Status of Mesenchymal Stem Cells by Label-Free Microscopy System and Machine Learning
+          </a>
+          <div class="ref-meta">
+            Kong Y. et al. (2023) — <span class="venue">Cells</span>, vol. 12, no. 11, p. 1524
+          </div>
+          <div class="ref-tags">
+            <span class="tag tag-ml">Classical ML</span>
+            <span class="tag tag-ml">K-means++</span>
+            <span class="tag tag-ml">Label-Free</span>
+            <a class="doi-link" href="https://doi.org/10.3390/cells12111524" target="_blank">doi:10.3390/cells12111524</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-item">
+        <div class="ref-num">9</div>
+        <div class="ref-body">
+          <a class="ref-title" href="https://doi.org/10.31083/fbl36266" target="_blank" rel="noopener">
+            3D Bioprinting of Cultivated Meat Followed by the Development of a Fine-Tuned YOLO Model for the Detection and Counting of Lipoblasts, Fibroblasts, and Myogenic Cells
+          </a>
+          <div class="ref-meta">
+            Nabiullina R. et al. (2025) — <span class="venue">Frontiers in Bioscience (Landmark Ed.)</span>, vol. 30, no. 3, p. 36266
+          </div>
+          <div class="ref-tags">
+            <span class="tag tag-dl">Deep Learning</span>
+            <span class="tag tag-dl">YOLOv8-seg</span>
+            <a class="doi-link" href="https://doi.org/10.31083/fbl36266" target="_blank">doi:10.31083/fbl36266</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-item">
+        <div class="ref-num">10</div>
+        <div class="ref-body">
+          <a class="ref-title" href="https://doi.org/10.1038/s41592-024-02580-4" target="_blank" rel="noopener">
+            Segment Anything for Microscopy
+          </a>
+          <div class="ref-meta">
+            Archit A. et al. (2025) — <span class="venue">Nature Methods</span>, vol. 22, pp. 579–591
+          </div>
+          <div class="ref-tags">
+            <span class="tag tag-dl">Deep Learning</span>
+            <span class="tag tag-dl">ViT / SAM</span>
+            <span class="tag tag-dl">Foundation Model</span>
+            <a class="doi-link" href="https://doi.org/10.1038/s41592-024-02580-4" target="_blank">doi:10.1038/s41592-024-02580-4</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <a href="/">Home</a> ·
+    <a href="https://github.com/berkantaksyy/CellDiff-Net">GitHub</a> ·
+    <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx" target="_blank" rel="noopener">Slides</a>
+    <br><br>
+    Berkant Aksoy · Elif Burak · Sarya Rojin Gönüldaş — BME418, 2025
+  </p>
+</footer>
+
+</body>
+</html>
