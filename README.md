@@ -4,7 +4,7 @@
 
 [![Website](https://img.shields.io/badge/🌐%20Website-Live-brightgreen)](https://berkantaksyy.github.io/CellDiff-Net/)
 [![Slides](https://img.shields.io/badge/📊%20Slides-View%20Online-blue)](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx)
-[![PDF](https://img.shields.io/badge/📄%20PDF-Download-informational)](https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pdf)
+[![PDF](https://img.shields.io/badge/📄%20PDF-View%20Slides-informational)](https://berkantaksyy.github.io/CellDiff-Net/slides)
 [![Paper](https://img.shields.io/badge/✍️%20Paper-Coming%20Soon-lightgrey)]()
 
 > Literature review and systematic analysis of deep learning / machine learning approaches for identifying stem cell differentiation states from microscopy images — prepared for **BME418: Stem Cells and Clinical Applications**.
@@ -15,6 +15,8 @@
 
 **Berkant AKSOY** (210402043) · **Elif BURAK** (210402056) · **Sarya Rojin GÖNÜLDAŞ** (230402052)
 
+Instructor: **Assoc. Prof. Didem Şen Karaman**
+
 ---
 
 ## 📂 Resources
@@ -23,7 +25,7 @@
 |---|---|---|
 | 🌐 | **Website** | [berkantaksyy.github.io/CellDiff-Net](https://berkantaksyy.github.io/CellDiff-Net/) |
 | 📊 | **Slides** | [▶ View online](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fberkantaksyy%2FCellDiff-Net%2Fmain%2Fslides%2FStemCell_DL_LiteratureReview.pptx) · [⬇ Download PPTX](https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pptx) |
-| 📄 | **PDF** | [⬇ Download PDF](https://raw.githubusercontent.com/berkantaksyy/CellDiff-Net/main/slides/StemCell_DL_LiteratureReview.pdf) |
+| 📄 | **PDF** | [▶ View online](https://berkantaksyy.github.io/CellDiff-Net/slides) · [⬇ Download](https://berkantaksyy.github.io/CellDiff-Net/assets/StemCell_DL_presentation.pdf) |
 | 📚 | **References** | [View on website](https://berkantaksyy.github.io/CellDiff-Net/references) · [BibTeX](references/references.bib) |
 | ✍️ | **Paper** | 🚧 Coming soon |
 
@@ -51,11 +53,13 @@
 ```
 CellDiff-Net/
 ├── docs/              # GitHub Pages site
-│   ├── index.html     # Landing page
-│   └── references.md  # Literature list
+│   ├── index.html        # Landing page
+│   ├── slides.html       # PDF viewer
+│   ├── references.html   # Literature list
+│   └── assets/
+│       └── StemCell_DL_presentation.pdf
 ├── slides/            # Presentation files
-│   ├── StemCell_DL_LiteratureReview.pptx
-│   └── StemCell_DL_LiteratureReview.pdf
+│   └── StemCell_DL_LiteratureReview.pptx
 ├── references/        # Reference artifacts
 │   ├── references.bib
 │   └── papers.json
