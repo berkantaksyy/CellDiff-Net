@@ -65,23 +65,6 @@ CellDiff-Net/
 
 ---
 
-## 🔧 Update References
-
-```bash
-export CROSSREF_MAILTO="berkantaksyy@gmail.com"
-python3 tools/update_references.py --refresh
-```
-
----
-
-## 🌐 GitHub Pages
-
-Published from `/docs` on `main`. Setup: **Settings → Pages → Branch: main / Folder: /docs**
-
-Live at: [berkantaksyy.github.io/CellDiff-Net](https://berkantaksyy.github.io/CellDiff-Net/)
-
----
-
 ## ⚖️ Ethics & Copyright
 
 Paper PDFs are not committed to this repository. Only citations and DOI links are published.
