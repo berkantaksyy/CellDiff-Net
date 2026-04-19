@@ -6,6 +6,8 @@ title: References
 
 This list is auto-generated from local PDFs under `private/papers/` (which are *not* committed).
 
+[← Home]({{ "/" | relative_url }})
+
 - **[Deep Learning Neural Networks Highly Predict Very Early Onset of Pluripotent Stem Cell Differentiation](https://doi.org/10.1016/j.stemcr.2019.02.004)** (2019 — Stem Cell Reports)
   - DOI: `10.1016/j.stemcr.2019.02.004`
 - **[Segment Anything for Microscopy](https://doi.org/10.1038/s41592-024-02580-4)** (2025 — Nature Methods)

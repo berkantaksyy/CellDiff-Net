@@ -3,13 +3,14 @@
 Project hub for a literature review and (future) implementation around **microscopy + deep learning** for identifying stem cell differentiation states.
 
 ## Website (GitHub Pages)
-This repo is set up to publish a simple project website from the **`/docs`** folder.
+Live site: https://berkantaksyy.github.io/CellDiff-Net/
 
-After you push to GitHub:
+This repo publishes a simple project website from the **`/docs`** folder.
+
+GitHub setup:
 1. Go to **Settings → Pages**
 2. **Source**: “Deploy from a branch”
 3. **Branch**: `main`  /  **Folder**: `/docs`
-4. Save — your site will be available at `https://<username>.github.io/<repo>/`
 
 ## Slides
 - `slides/StemCell_DL_LiteratureReview.pptx`

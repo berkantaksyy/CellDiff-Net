@@ -219,6 +219,8 @@ def write_docs_markdown(papers: list[Paper], out_path: Path) -> None:
     lines.append("")
     lines.append("This list is auto-generated from local PDFs under `private/papers/` (which are *not* committed).")
     lines.append("")
+    lines.append("[← Home]({{ \"/\" | relative_url }})")
+    lines.append("")
 
     for p in sorted(papers, key=lambda x: x.paper_id):
         title = p.title or p.paper_id
